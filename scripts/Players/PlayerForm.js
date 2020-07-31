@@ -1,6 +1,7 @@
 import { getTeams, useTeams } from "../Teams/TeamProvider.js"
 
 const contentTarget = document.querySelector(".playerFormContainer")
+const eventHub = document.querySelector(".container")
 
 const render = teams => {
   contentTarget.innerHTML = `
@@ -42,4 +43,9 @@ contentTarget.addEventListener("click", clickEvent => {
 
     console.log(player)
   }
+})
+
+eventHub.addEventListener("teamStateChanged", () => {
+  const updatedTeams = useTeams()
+  render(updatedTeams)
 })
