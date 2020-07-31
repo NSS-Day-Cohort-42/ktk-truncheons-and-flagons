@@ -1,13 +1,33 @@
 let players=[]
 
-export const getPlayers=()=>{
+const eventHub = document.querySelector(".container")
+
+const dispatchStateChangeEvent = () => {
+    const playerStateChangedEvent = new CustomEvent("playerStateChanged")
+
+    eventHub.dispatchEvent(playerStateChangedEvent);
+}
+
+export const getPlayers = () =>{
     return fetch("http://localhost:8088/players")
-    .then(resp=>resp.json())
-    .then(parseplays=>{
-        players=parseplays
+    .then(resp => resp.json())
+    .then(parseplays => {
+        players = parseplays
     })
 }
 
-export const usePlayers=()=>{
+export const usePlayers = () =>{
     return players.slice()
+}
+
+export const savePlayer = player => {
+    fetch("http://localhost:8088/players", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(player)
+    })
+        .then(getPlayers)
+        .then(dispatchStateChangeEvent)
 }
