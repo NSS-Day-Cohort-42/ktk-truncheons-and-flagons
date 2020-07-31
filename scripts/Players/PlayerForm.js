@@ -8,6 +8,7 @@ const render = teams => {
     <div class="playerForm">
       <input class="playerForm__firstName" type="text" placeholder="First Name">
       <input class="playerForm__lastName" type="text" placeholder="Last Name">
+      <input class="playerForm__country" type="text" placeholder="Country">
       <select class="playerForm__chooseTeam" id="chooseTeam">
         <option value="0">Please select a team...</option>
         ${
@@ -33,12 +34,14 @@ contentTarget.addEventListener("click", clickEvent => {
   if(clickEvent.target.id === "createPlayer") {
     const firstName = document.querySelector(".playerForm__firstName").value
     const lastName = document.querySelector(".playerForm__lastName").value
+    const country = document.querySelector(".playerForm__country").value
     const chosenTeam = document.querySelector(".playerForm__chooseTeam").value
 
     const player = {
       firstName: firstName,
       lastName: lastName,
-      team: parseInt(chosenTeam)
+      country: country,
+      teamId: parseInt(chosenTeam)
     }
 
     console.log(player)
