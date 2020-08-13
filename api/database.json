@@ -1,40 +1,50 @@
 {
-    "teams": [
-        {
-            "id":1,
-            "name":"The Growlbacks",
-            "dateCreated":"07-06-2020"
-        }
-    ],
-    "players": [
-        {
-            "id": 1,
-            "firstName": "Brown",
-            "lastName": "Stevelee",
-            "country":"USA",
-            "teamId": 1
-        },
-        {
-            "id": 2,
-            "firstName": "Jason",
-            "lastName": "Server",
-            "country":"Lithuania",
-            "teamId": 1
-        },
-        {
-            "id": 3,
-            "firstName": "Miz",
-            "lastName": "Trunchbull",
-            "country":"England",
-            "teamId": 1
-        }
-    ],
-    "scores": [
-        {
-            "id": 1,
-            "teamId":1,
-            "date": "07-20-2020",
-            "points": 550
-        }
-    ]
+  "teams": [
+    {
+      "id": 1,
+      "name": "The Growlbacks",
+      "dateCreated": "07-06-2020"
+    },
+    {
+      "name": "HERE IS MY TEST TEAM",
+      "dateCreated": 1597346553537,
+      "id": 2
+    },
+    {
+      "name": "TEST",
+      "dateCreated": 1597346721767,
+      "id": 3
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "firstName": "Brown",
+      "lastName": "Stevelee",
+      "country": "USA",
+      "teamId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Jason",
+      "lastName": "Server",
+      "country": "Lithuania",
+      "teamId": 1
+    },
+    {
+      "id": 3,
+      "firstName": "Miz",
+      "lastName": "Trunchbull",
+      "country": "England",
+      "teamId": 1
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "teamId": 1,
+      "date": "07-20-2020",
+      "points": 550
+    }
+  ]
 }
