@@ -14,7 +14,7 @@ eventHub.addEventListener("click",clickEvent=>{
     }
 })
 
-export const teamForm=()=>{
+export const TeamForm=()=>{
     render()
 }
 
