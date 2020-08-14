@@ -4,4 +4,4 @@ import { StartGame } from "./Start/StartGame.js"
 
 StartGame()
 PlayerForm()
-TeamForm()
+TeamForm() 

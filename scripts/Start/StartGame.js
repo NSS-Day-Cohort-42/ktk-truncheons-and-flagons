@@ -3,7 +3,7 @@ const contentTarget = document.querySelector(".container")
 
 
 const render = () => {
-    contentTarget.innerHTML =
+    contentTarget.innerHTML +=
     `<button class="" id="startGameButton">Start Game</button>`
 }
 
