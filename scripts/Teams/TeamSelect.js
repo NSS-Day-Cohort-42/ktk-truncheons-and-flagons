@@ -1,7 +1,7 @@
 import {useTeams, getTeams} from "./TeamProvider.js"
 
 
-const contentTarget = document.querySelector(".teamSelectDropdowns")
+const contentTarget = document.querySelector(".view2")
 const eventHub = document.querySelector(".container")
 
 
