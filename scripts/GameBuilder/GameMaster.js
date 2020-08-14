@@ -1,8 +1,3 @@
-// DUMMY FUNCTIONS -- THESE WILL BE IMPORTS WHEN THE RELEVANT COMPONENTS ARE WRITTEN:
-const StartGameButton = () => "<h1>Start Game Button</h1>"
-const TeamSelect = () => "<h1>Team Select</h1>"
-const ScoreForm = () => "<h1>Score Form</h1>"
-
 const eventHub = document.querySelector(".container")
 
 const gameStates = [ "gameStart", "teamSelect", "scoreForm" ]
@@ -61,13 +56,13 @@ const renderCurrentComponent = () => {
 
   switch(currentState) {
     case "gameStart":
-      StartGameButton()
+      // StartGameButton()
       break
     case "teamSelect":
-      TeamSelect()
+      // TeamSelect()
       break
     case "scoreForm":
-      ScoreForm(state.teams, state.round)
+      // ScoreForm(state.teams, state.round)
       break
   }
 }
