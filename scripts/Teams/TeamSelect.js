@@ -2,18 +2,9 @@ import {useTeams, getTeams} from "./TeamProvider.js"
 
 
 const contentTarget = document.querySelector(".teamSelectDropdowns")
+const eventHub = document.querySelector(".container")
 
 
-/* export const AllTeamsSelected = () => {
- contentTarget.addEventListener("change", (changeEvent) => {
-        const customEvent = new CustomEvent("AllTeamsSelected", {
-            detail: {
-                crimeId: changeEvent.target.value
-            }
-        })
-        eventHub.dispatchEvent(customEvent)
-    })
-} */
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "goButton") {
