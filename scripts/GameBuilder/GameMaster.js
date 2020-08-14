@@ -22,6 +22,7 @@ eventHub.addEventListener("startGameButtonClicked", () => {
   progressToNextGameState()
 })
 
+// User selected the three teams from TeamSelect - save them in app state and go to the next state
 eventHub.addEventListener("allTeamsSelected", event => {
   const teams = event.detail.teams
   state.teams = teams
@@ -29,6 +30,7 @@ eventHub.addEventListener("allTeamsSelected", event => {
   progressToNextGameState()
 })
 
+// User saved round scores for the teams - update the teams' scores in app state and progress to the next round, or if this event happened for the third round, reset application state and jump back to initial state
 eventHub.addEventListener("roundSaved", event => {
   // going to pretend "scores" is array of objects { teamId: id, score: <the score for this round for this team> }
   const scores = event.detail.scores
@@ -42,7 +44,7 @@ eventHub.addEventListener("roundSaved", event => {
   // move on to the next round
   state.round += 1
 
-  if(round <= 3) {
+  if(state.round <= 3) {
     renderCurrentComponent()
   }
   else {
