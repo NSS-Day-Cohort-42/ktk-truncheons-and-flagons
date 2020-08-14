@@ -5,10 +5,6 @@ const ScoreForm = () => "<h1>Score Form</h1>"
 
 const eventHub = document.querySelector(".container")
 
-const view1Target = document.querySelector(".view--1")
-const view2Target = document.querySelector(".view--2")
-const view3Target = document.querySelector(".view--3")
-
 const gameStates = [ "gameStart", "teamSelect", "scoreForm" ]
 
 const state = {
@@ -65,13 +61,13 @@ const renderCurrentComponent = () => {
 
   switch(currentState) {
     case "gameStart":
-      view1Target.innerHTML = StartGameButton()
+      StartGameButton()
       break
     case "teamSelect":
-      view2Target.innerHTML = TeamSelect()
+      TeamSelect()
       break
     case "scoreForm":
-      view3Target.innerHTML = ScoreForm(state.teams, state.round)
+      ScoreForm(state.teams, state.round)
       break
   }
 }
