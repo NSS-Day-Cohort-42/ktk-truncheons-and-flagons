@@ -3,7 +3,7 @@ const contentTarget = document.querySelector(".view1")
 
 
 const render = () => {
-    contentTarget.innerHTML +=
+    contentTarget.innerHTML =
     `<button class="" id="startGameButton">Start Game</button>`
 }
 
@@ -16,7 +16,5 @@ eventHub.addEventListener("click", clickEvent => {
         const startGameButtonEvent = new CustomEvent ("startGameButtonClicked")
 
         eventHub.dispatchEvent(startGameButtonEvent)
-        console.log(startGameButtonEvent)
-
     }
 })
