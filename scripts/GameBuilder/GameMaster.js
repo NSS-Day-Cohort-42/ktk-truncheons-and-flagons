@@ -1,3 +1,5 @@
+import { StartGame } from "../Start/StartGame.js"
+
 const eventHub = document.querySelector(".container")
 
 const gameStates = [ "gameStart", "teamSelect", "scoreForm" ]
@@ -56,7 +58,7 @@ const renderCurrentComponent = () => {
 
   switch(currentState) {
     case "gameStart":
-      // StartGameButton()
+      StartGame()
       break
     case "teamSelect":
       // TeamSelect()
