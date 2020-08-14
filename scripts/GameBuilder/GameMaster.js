@@ -1,4 +1,5 @@
 import { StartGame } from "../Start/StartGame.js"
+import { teamSelect } from "../Teams/TeamSelect.js"
 
 const eventHub = document.querySelector(".container")
 
@@ -16,8 +17,8 @@ eventHub.addEventListener("startGameButtonClicked", () => {
 })
 
 // User selected the three teams from TeamSelect - save them in app state and go to the next state
-eventHub.addEventListener("allTeamsSelected", event => {
-  const teams = event.detail.teams
+eventHub.addEventListener("AllTeamsSelected", event => {
+  const teams = event.detail.teamIds
   state.teams = teams
 
   progressToNextGameState()
@@ -61,7 +62,7 @@ const renderCurrentComponent = () => {
       StartGame()
       break
     case "teamSelect":
-      // TeamSelect()
+      teamSelect()
       break
     case "scoreForm":
       // ScoreForm(state.teams, state.round)
