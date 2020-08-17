@@ -42,10 +42,7 @@ eventHub.addEventListener("roundSaved", event => {
     renderCurrentComponent()
   }
   else {
-    // save each score data for each team to scoreprovider
-    // then reset game to start
-    state.teams = []
-    state.round = 1
+    // TODO: save each score data for each team to scoreprovider
     progressToNextGameState()
   }
 })
@@ -72,9 +69,18 @@ const renderCurrentComponent = () => {
 
 const progressToNextGameState = () => {
   state.currentState++;
+
   if(state.currentState >= gameStates.length) {
-    state.currentState = 0;
+    resetGameState();
   }
 
   renderCurrentComponent()
+}
+
+const resetGameState = () => {
+  state = {
+    currentState: 0,
+    teams: [],
+    round: 1
+  }
 }
