@@ -78,9 +78,7 @@ const progressToNextGameState = () => {
 }
 
 const resetGameState = () => {
-  state = {
-    currentState: 0,
-    teams: [],
-    round: 1
-  }
+  state.currentState = 0
+  state.teams = []
+  state.round = 1
 }
