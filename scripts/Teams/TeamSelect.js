@@ -18,12 +18,12 @@ eventHub.addEventListener("click", (clickEvent) => {
     if (selectSet.size != 3 || selectSet.has("0")) {
       alert("please choose 3 unique teams!");
     } else {
-      const AllTeamsSelected = new CustomEvent("allTeamsSelected", {
+      const AllTeamsSelected = new CustomEvent("AllTeamsSelected", {
         detail: {
           teamIds: [select1.value, select2.value, select3.value],
         },
       });
-      eventHub.dispatchEvent(allTeamsSelected);
+      eventHub.dispatchEvent(AllTeamsSelected);
     }
   }
 });
