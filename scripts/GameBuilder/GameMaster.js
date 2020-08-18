@@ -1,7 +1,10 @@
 import { StartGame } from "../Start/StartGame.js"
 import { teamSelect } from "../Teams/TeamSelect.js"
+import { useTeams } from "../Teams/TeamProvider.js"
 
 const eventHub = document.querySelector(".container")
+
+const ROUND_LIMIT = 3
 
 const gameStates = [ "gameStart", "teamSelect", "scoreForm" ]
 
@@ -16,10 +19,17 @@ eventHub.addEventListener("startGameButtonClicked", () => {
   progressToNextGameState()
 })
 
-// User selected the three teams from TeamSelect - save them in app state and go to the next state
+// User selected the three teams from TeamSelect - grab the full team objects from teams array, initialize their scores to 0 for the game, assign them to GameMaster application state teams, move on to next game state
 eventHub.addEventListener("AllTeamsSelected", event => {
-  const teams = event.detail.teamIds
-  state.teams = teams
+  const teamIds = event.detail.teamIds
+  const allTeams = useTeams()
+
+  const selectedTeamObjects = teamIds.map(teamId => {
+    const foundTeam = allTeams.find(team => team.id === parseInt(teamId))
+    foundTeam.score = 0
+    return foundTeam
+  })
+  state.teams = selectedTeamObjects
 
   progressToNextGameState()
 })
@@ -31,14 +41,14 @@ eventHub.addEventListener("roundSaved", event => {
 
   // update the total score for each team
   scores.forEach(scoreInfo => {
-    const foundTeam = state.teams.find(team => team.id === scoreInfo.teamId)
+    const foundTeam = state.teams.find(team => team.id === parseInt(scoreInfo.teamId))
     foundTeam.score += scoreInfo.score
   })
 
   // move on to the next round
   state.round += 1
 
-  if(state.round <= 3) {
+  if(state.round <= ROUND_LIMIT) {
     renderCurrentComponent()
   }
   else {
@@ -63,6 +73,7 @@ const renderCurrentComponent = () => {
       break
     case "scoreForm":
       // ScoreForm(state.teams, state.round)
+      // ScoreList(state.teams)
       break
   }
 }
