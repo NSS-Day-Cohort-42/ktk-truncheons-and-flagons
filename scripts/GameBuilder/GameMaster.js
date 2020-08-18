@@ -1,5 +1,6 @@
 import { StartGame } from "../Start/StartGame.js"
 import { teamSelect } from "../Teams/TeamSelect.js"
+import { ScoreList } from "../Scores/ScoreList.js"
 import { useTeams } from "../Teams/TeamProvider.js"
 
 const eventHub = document.querySelector(".container")
@@ -73,7 +74,7 @@ const renderCurrentComponent = () => {
       break
     case "scoreForm":
       // ScoreForm(state.teams, state.round)
-      // ScoreList(state.teams)
+      ScoreList(state.teams)
       break
   }
 }
