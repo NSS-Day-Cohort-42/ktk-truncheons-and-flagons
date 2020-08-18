@@ -11,15 +11,20 @@ eventHub.addEventListener("click", clickEvent => {
             const select1 = document.querySelector(".teamSelect1")
             const select2 = document.querySelector(".teamSelect2")
             const select3 = document.querySelector(".teamSelect3")
-            if(select1.value !== "0" && select2.value !== "0" && select3.value !== "0"){
+
+            //conditional check for 3 unique ids
+            const selectValues = [select1.value, select2.value, select3.value]
+            let selectSet = new Set()
+            selectValues.forEach(value => {selectSet.add(value)})
+            if (selectSet.size != 3 || selectSet.has("0")){
+                alert("please choose 3 unique teams!")
+            } else {
                 const AllTeamsSelected = new CustomEvent ("AllTeamsSelected", {
                     detail: {
                         teamIds: [select1.value, select2.value, select3.value]
                     }
                 })
                 eventHub.dispatchEvent(AllTeamsSelected)
-            } else {
-                alert("please select three teams!!!")
             }
     }
 })
