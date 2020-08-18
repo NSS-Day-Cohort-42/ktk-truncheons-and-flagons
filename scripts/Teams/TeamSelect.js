@@ -23,7 +23,7 @@ eventHub.addEventListener("click", (clickEvent) => {
           teamIds: [select1.value, select2.value, select3.value],
         },
       });
-      eventHub.dispatchEvent(AllTeamsSelected);
+      eventHub.dispatchEvent(allTeamsSelected);
     }
   }
 });
