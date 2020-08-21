@@ -14,7 +14,7 @@ export const getScores = () => {
 
 export const saveScores = scores => {
   const [ score1, score2, score3 ] = scores
-  saveScore(score1)
+  return saveScore(score1)
     .then(() => saveScore(score2))
     .then(() => saveScore(score3))
     .then(getScores)
