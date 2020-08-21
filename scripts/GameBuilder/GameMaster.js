@@ -1,6 +1,7 @@
 import { StartGame } from "../Start/StartGame.js"
 import { teamSelect } from "../Teams/TeamSelect.js"
 import { ScoreList } from "../Scores/ScoreList.js"
+import { scoreForm } from "../Scores/ScoreForm.js"
 import { useTeams } from "../Teams/TeamProvider.js"
 
 const eventHub = document.querySelector(".container")
@@ -36,14 +37,14 @@ eventHub.addEventListener("AllTeamsSelected", event => {
 })
 
 // User saved round scores for the teams - update the teams' scores in app state and progress to the next round, or if this event happened for the third round, reset application state and jump back to initial state
-eventHub.addEventListener("roundSaved", event => {
+eventHub.addEventListener("AllScoresSubmitted", event => {
   // going to pretend "scores" is array of objects { teamId: id, score: <the score for this round for this team> }
-  const scores = event.detail.scores
+  const scoresInfo = event.detail.scoresInfo
 
   // update the total score for each team
-  scores.forEach(scoreInfo => {
+  scoresInfo.forEach(scoreInfo => {
     const foundTeam = state.teams.find(team => team.id === parseInt(scoreInfo.teamId))
-    foundTeam.score += scoreInfo.score
+    foundTeam.score += parseInt(scoreInfo.score)
   })
 
   // move on to the next round
@@ -53,7 +54,6 @@ eventHub.addEventListener("roundSaved", event => {
     renderCurrentComponent()
   }
   else {
-    // TODO: save each score data for each team to scoreprovider
     progressToNextGameState()
   }
 })
@@ -73,7 +73,7 @@ const renderCurrentComponent = () => {
       teamSelect()
       break
     case "scoreForm":
-      // ScoreForm(state.teams, state.round)
+      scoreForm(state.teams)
       ScoreList(state.teams)
       break
   }
