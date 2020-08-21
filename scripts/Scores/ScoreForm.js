@@ -25,7 +25,7 @@ eventHub.addEventListener("click", clickEvent => {
         })
 
             const scoresSubmitted = new CustomEvent("AllScoresSubmitted", {
-                details:  {
+                detail:  {
                     scoresInfo: specificValues
                 }
             })
