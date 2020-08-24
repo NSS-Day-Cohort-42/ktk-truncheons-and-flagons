@@ -1,6 +1,7 @@
-const contentTarget = document.querySelector(".view3");
+//const contentTarget = document.querySelector(".gameContainer");
 
 export const ScoreList = (teams) => {
+  const contentElement = document.querySelector(".scoreForm")
   const scoreListHTML = `
             <table>
                 <tr>
@@ -11,8 +12,8 @@ export const ScoreList = (teams) => {
                         return `<tr><td>${team.name}</td><td>${team.score}</td></tr>`;
                       })
                       .join("")}
-            <table>    
+            </table>    
     `;
 
-  contentTarget.innerHTML += scoreListHTML;
+  contentElement.innerHTML += scoreListHTML;
 };

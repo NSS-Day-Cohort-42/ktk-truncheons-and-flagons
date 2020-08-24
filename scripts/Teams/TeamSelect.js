@@ -1,6 +1,6 @@
 import { useTeams, getTeams } from "./TeamProvider.js";
 
-const contentTarget = document.querySelector(".view2");
+const contentTarget = document.querySelector(".gameContainer");
 const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("click", (clickEvent) => {

@@ -1,6 +1,8 @@
 .scoreForm {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .teamScore, #submitScore {
@@ -15,5 +17,5 @@
 .teamScore{
     margin-bottom: 1.5rem;
     border-style: none none solid none;
-    
+
 }

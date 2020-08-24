@@ -1,7 +1,7 @@
 
 
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".view3")
+const contentTarget = document.querySelector(".gameContainer")
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "submitScore"){
@@ -40,14 +40,16 @@ const render = (arrayOfTeams) => {
     
     contentTarget.innerHTML = `
        <section class="scoreForm">
+       <div>
         ${
             arrayOfTeams.map(teamObject => {
-                return `<div id="teamName--${teamObject.id}">${teamObject.name}
+                return `<div class="teamNameScores" id="teamName--${teamObject.id}">${teamObject.name}
                 <input id="team--${teamObject.id}" class="teamScore" type="text" placeholder="enter round score here"></input>
                 </div>`
             }).join("")
         }
             <button id="submitScore">Save Round Score</button>
+            </div>
         </section>
 
     `

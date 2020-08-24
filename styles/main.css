@@ -2,8 +2,21 @@
 @import './selects.css';
 @import './scoreForm.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap');
+
 
 
 #startGameButton {
     cursor: pointer;
 }
+
+#startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th {
+    font-family: 'Russo One', sans-serif;
+}
+
+input, select, td, .teamNameScores {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
