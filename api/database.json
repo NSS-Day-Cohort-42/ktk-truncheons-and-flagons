@@ -39,12 +39,5 @@
       "teamId": 1
     }
   ],
-  "scores": [
-    {
-      "id": 1,
-      "teamId": 1,
-      "date": "07-20-2020",
-      "points": 550
-    }
-  ]
+  "scores": []
 }

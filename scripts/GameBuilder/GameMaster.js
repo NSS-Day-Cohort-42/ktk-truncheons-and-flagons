@@ -3,6 +3,7 @@ import { teamSelect } from "../Teams/TeamSelect.js"
 import { ScoreList } from "../Scores/ScoreList.js"
 import { scoreForm } from "../Scores/ScoreForm.js"
 import { useTeams } from "../Teams/TeamProvider.js"
+import { saveScores } from "../Scores/ScoreProvider.js"
 
 const eventHub = document.querySelector(".container")
 
@@ -54,9 +55,26 @@ eventHub.addEventListener("AllScoresSubmitted", event => {
     renderCurrentComponent()
   }
   else {
-    progressToNextGameState()
+    const scoreObjects = createScoreObjectsFromCurrentState()
+
+    saveScores(scoreObjects)
+      .then(() => progressToNextGameState())
   }
 })
+
+const createScoreObjectsFromCurrentState = () => {
+  const gameFinishedTimeStamp = Date.now()
+
+  const scoreObjects = state.teams.map(team => {
+    return {
+      teamId: team.id,
+      points: team.score,
+      date: gameFinishedTimeStamp
+    }
+  })
+
+  return scoreObjects
+}
 
 export const GameMaster = () => {
   renderCurrentComponent()
