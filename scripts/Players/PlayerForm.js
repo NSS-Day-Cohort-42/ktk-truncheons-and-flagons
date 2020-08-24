@@ -42,14 +42,12 @@ contentTarget.addEventListener("click", (clickEvent) => {
         country: country,
         teamId: parseInt(chosenTeam),
       };
-
-      console.log(player);
       savePlayer(player);
     } else alert("plzz choose a team");
   }
 });
 
-//if a team changes (addded or, at some point, maybe? deleted), re-render the player creation form
+//if a team changes (added or, at some point, maybe? deleted), re-render the player creation form
 //with a fresh copy of the teams data pulled in so the dropdown bar is accurate
 eventHub.addEventListener("teamStateChanged", () => {
   const updatedTeams = useTeams();

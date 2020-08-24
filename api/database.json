@@ -16,11 +16,6 @@
       "id": 3
     },
     {
-      "name": "",
-      "dateCreated": 1598051010775,
-      "id": 4
-    },
-    {
       "name": "NOPE",
       "dateCreated": 1598051409611,
       "id": 5
@@ -47,13 +42,6 @@
       "lastName": "Trunchbull",
       "country": "England",
       "teamId": 1
-    },
-    {
-      "firstName": "Gavin",
-      "lastName": "Schriver",
-      "country": "United States",
-      "teamId": 2,
-      "id": 4
     }
   ],
   "scores": []
