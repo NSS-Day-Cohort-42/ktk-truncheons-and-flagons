@@ -21,3 +21,7 @@
     width: fit-content;
     margin-bottom: 0.5rem;
 }
+
+.teamForm__createTeam, .playerForm__createPlayer {
+    cursor: pointer;
+}

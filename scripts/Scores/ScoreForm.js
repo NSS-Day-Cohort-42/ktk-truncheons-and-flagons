@@ -39,11 +39,12 @@ eventHub.addEventListener("click", clickEvent => {
 const render = (arrayOfTeams) => {
     
     contentTarget.innerHTML = `
-       <section class="scoreForm>
+       <section class="scoreForm">
         ${
             arrayOfTeams.map(teamObject => {
-                return `<div id="teamName--${teamObject.id}">${teamObject.name}</div>
-                <input id="team--${teamObject.id}" class="teamScore" type="text" placeholder="enter round score here"></input>`
+                return `<div id="teamName--${teamObject.id}">${teamObject.name}
+                <input id="team--${teamObject.id}" class="teamScore" type="text" placeholder="enter round score here"></input>
+                </div>`
             }).join("")
         }
             <button id="submitScore">Save Round Score</button>

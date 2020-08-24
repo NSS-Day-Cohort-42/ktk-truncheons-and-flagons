@@ -1,2 +1,9 @@
-@import './forms.css';
+@import './startingForms.css';
+@import './selects.css';
+@import './scoreForm.css';
 
+
+
+#startGameButton {
+    cursor: pointer;
+}

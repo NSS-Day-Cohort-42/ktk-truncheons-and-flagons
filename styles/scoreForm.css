@@ -1,0 +1,19 @@
+.scoreForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.teamScore, #submitScore {
+    width: fit-content;
+    margin: 0.5rem 0;
+}
+
+#submitScore {
+    cursor: pointer;
+}
+
+.teamScore{
+    margin-bottom: 1.5rem;
+    border-style: none none solid none;
+    
+}
