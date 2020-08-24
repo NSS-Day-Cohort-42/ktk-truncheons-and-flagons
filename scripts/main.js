@@ -1,9 +1,7 @@
-import { PlayerForm } from "./Players/PlayerForm.js";
-import { TeamForm } from "./Teams/TeamForm.js";
-import { teamSelect } from "./Teams/TeamSelect.js";
-import { StartGame } from "./Start/StartGame.js";
+import { GameMaster } from "./GameBuilder/GameMaster.js"
+import { PlayerForm } from "./Players/PlayerForm.js"
+import { TeamForm } from "./Teams/TeamForm.js"
 
-StartGame();
-PlayerForm();
-TeamForm();
-teamSelect();
+PlayerForm()
+TeamForm() 
+GameMaster()

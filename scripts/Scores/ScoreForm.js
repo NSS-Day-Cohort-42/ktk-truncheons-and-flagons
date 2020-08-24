@@ -5,32 +5,32 @@ const contentTarget = document.querySelector(".view3")
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "submitScore"){
-        //store querySelected items in variable?
-            
-        const allInputNodes = document.querySelectorAll(".teamScore")
-        //all inputs in an array [{1}, {2}, {3}]
 
-        //get the teamId from node
-        //get the score from the node (.value)
-        //return an object 
-        const specificValues = allInputNodes.map(node => {
+        //all inputs in an array [{1}, {2}, {3}]
+        const allInputNodesList = document.querySelectorAll(".teamScore")
+
+        const specificValues = []
+
+        for(const node of allInputNodesList) {
+            //get the teamId from node
+            //get the score from the node (.value)
+            //return an object 
             const teamId = node.id.split("--")[1]
             const score = node.value
 
-            return {
+            specificValues.push({
                 teamId: teamId,
                 score: score 
-            }
+            })
+        }
 
+        const scoresSubmitted = new CustomEvent("AllScoresSubmitted", {
+            detail:  {
+                scoresInfo: specificValues
+            }
         })
 
-            const scoresSubmitted = new CustomEvent("AllScoresSubmitted", {
-                detail:  {
-                    scoresInfo: specificValues
-                }
-            })
-
-        dispatchEvent(scoresSubmitted)
+        eventHub.dispatchEvent(scoresSubmitted)
     }
 })
 
