@@ -4,7 +4,8 @@ const contentTarget = document.querySelector(".gameContainer")
 
 const render = () => {
     contentTarget.innerHTML =
-    `<button class="" id="startGameButton">Start Game</button>`
+
+    `<div class="startGameButton"><button id="startGameButton">Start Game</button></div>`
 }
 
 export const StartGame = () => {

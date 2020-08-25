@@ -3,7 +3,7 @@
 export const ScoreList = (teams) => {
   const contentElement = document.querySelector(".scoreForm")
   const scoreListHTML = `
-            <table>
+            <table class="tableElement">
                 <tr>
                     <th>Team</th><th>Current Score</th>
                 </tr>    

@@ -40,10 +40,10 @@ const render = (arrayOfTeams) => {
     
     contentTarget.innerHTML = `
        <section class="scoreForm">
-       <div>
+       <div class="teamNameScores">
         ${
             arrayOfTeams.map(teamObject => {
-                return `<div class="teamNameScores" id="teamName--${teamObject.id}">${teamObject.name}
+                return `<div id="teamName--${teamObject.id}">${teamObject.name}
                 <input id="team--${teamObject.id}" class="teamScore" type="text" placeholder="enter round score here"></input>
                 </div>`
             }).join("")
