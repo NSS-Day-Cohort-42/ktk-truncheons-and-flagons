@@ -4,13 +4,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap');
 
-
+header {
+    display: flex;
+    background-color: rgb(245, 245, 245, 0.7);
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+.truncheon, .flagon {
+    width: 10%;
+}
 
 #startGameButton {
     cursor: pointer;
 }
 
-#startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle {
+header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle {
     font-family: 'Russo One', sans-serif;
 }
 
