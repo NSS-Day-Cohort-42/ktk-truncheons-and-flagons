@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-#startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th {
+#startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle {
     font-family: 'Russo One', sans-serif;
 }
 

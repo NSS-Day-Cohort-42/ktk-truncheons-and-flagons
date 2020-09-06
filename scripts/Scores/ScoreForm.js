@@ -41,10 +41,11 @@ const render = (arrayOfTeams) => {
     contentTarget.innerHTML = `
        <section class="scoreForm">
        <div class="teamNameScores">
+       <h3 class="scoreFormTitle">Round Scores</h4>
         ${
             arrayOfTeams.map(teamObject => {
-                return `<div id="teamName--${teamObject.id}">${teamObject.name}
-                <input id="team--${teamObject.id}" class="teamScore" type="text" placeholder="enter round score here"></input>
+                return `<div id="teamName--${teamObject.id}" class="teamScores">${teamObject.name}
+                <input id="team--${teamObject.id}" class="teamScore" type="text" placeholder="enter score"></input>
                 </div>`
             }).join("")
         }

@@ -23,6 +23,7 @@
 .teamScore{
     margin-bottom: 1.5rem;
     border-style: none none solid none;
+    width: 28%;
 }
 
 .tableElement {
@@ -40,4 +41,14 @@
     border-radius: 50px;
     padding: 2rem;
 
+}
+
+.teamScores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scoreFormTitle {
+    justify-content: center;
+    display: flex;
 }
