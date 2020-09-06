@@ -26,12 +26,12 @@
     width: 28%;
 }
 
-.tableElement {
+.tableDiv {
     border: 2px solid black;
     margin: 2rem 1rem;
     background-color: rgb(10, 92, 35, 0.7);
     border-radius: 50px;
-    padding: 5rem 1rem;
+    padding: 5rem 3rem;
 }
 
 .teamNameScores { 
@@ -51,4 +51,26 @@
 .scoreFormTitle {
     justify-content: center;
     display: flex;
+}
+
+table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+.scoresNumber {
+    text-align: center;
+}
+
+.tableRows {
+    height: 2.5rem;
+    background-color:rgb(245, 245, 245, 0.7);;
+}
+
+.tableHeader {
+   background-color: rgb(12, 59, 74);
+   height: 2rem;
 }

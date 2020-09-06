@@ -44,5 +44,24 @@
       "teamId": 1
     }
   ],
-  "scores": []
+  "scores": [
+    {
+      "teamId": 1,
+      "points": 27,
+      "date": 1599420869603,
+      "id": 1
+    },
+    {
+      "teamId": 3,
+      "points": 25,
+      "date": 1599420869603,
+      "id": 2
+    },
+    {
+      "teamId": 5,
+      "points": 14,
+      "date": 1599420869603,
+      "id": 3
+    }
+  ]
 }
