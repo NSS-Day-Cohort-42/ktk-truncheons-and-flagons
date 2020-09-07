@@ -1,4 +1,5 @@
 import { useTeams, getTeams } from "./TeamProvider.js";
+import { getPlayers, usePlayers } from "../Players/PlayerProvider.js"
 
 const contentTarget = document.querySelector(".gameContainer");
 const eventHub = document.querySelector(".container");
@@ -30,23 +31,29 @@ eventHub.addEventListener("click", (clickEvent) => {
 
 const render = () => {
   const teamArr = useTeams();
+  const players = usePlayers();
+
+  const filteredTeams = teamArr.filter(team => {
+    return players.filter(player => player.teamId === team.id).length === 3
+  })
+
   contentTarget.innerHTML = `
       <div class="teamSelect">
         <select class="teamSelect1">
             <option value=0>Please select a team...</option>
-            ${teamArr.map((team) => {
+            ${filteredTeams.map((team) => {
               return `<option value="${team.id}">${team.name}</option>`;
             })}
         </select>
         <select class="teamSelect2">
             <option value=0>Please select a team...</option>
-            ${teamArr.map((team) => {
+            ${filteredTeams.map((team) => {
               return `<option value="${team.id}">${team.name}</option>`;
             })}
         </select>
         <select class="teamSelect3">
             <option value=0>Please select a team...</option>
-            ${teamArr.map((team) => {
+            ${filteredTeams.map((team) => {
               return `<option value="${team.id}">${team.name}</option>`;
             })}
         </select>
@@ -56,7 +63,7 @@ const render = () => {
 };
 
 export const teamSelect = () => {
-  getTeams().then(render);
+  getTeams().then(getPlayers).then(render);
 };
 
 eventHub.addEventListener("teamStateChanged", () => {

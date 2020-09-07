@@ -120,6 +120,27 @@
       "country": "YAHS",
       "teamId": 7,
       "id": 12
+    },
+    {
+      "firstName": "here is my test team",
+      "lastName": "1",
+      "country": "usa",
+      "teamId": 2,
+      "id": 13
+    },
+    {
+      "firstName": "here is my test team",
+      "lastName": "2",
+      "country": "usa",
+      "teamId": 2,
+      "id": 14
+    },
+    {
+      "firstName": "here is my test team",
+      "lastName": "3",
+      "country": "usa",
+      "teamId": 2,
+      "id": 15
     }
   ],
   "scores": [
@@ -194,6 +215,24 @@
       "points": 93614230,
       "date": 1599521489159,
       "id": 12
+    },
+    {
+      "teamId": 1,
+      "points": 3,
+      "date": 1599522633703,
+      "id": 13
+    },
+    {
+      "teamId": 2,
+      "points": 6,
+      "date": 1599522633703,
+      "id": 14
+    },
+    {
+      "teamId": 6,
+      "points": 9,
+      "date": 1599522633703,
+      "id": 15
     }
   ]
 }
