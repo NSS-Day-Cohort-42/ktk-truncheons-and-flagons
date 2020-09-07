@@ -19,7 +19,7 @@ const render = teams => {
       <ol class="game-final-ranking">
         ${ teams.map(team => `<li class="game-final-ranking__team">${team.name} (Score: ${team.score})</li>`).join("") }
       </ol>
-      <button id="backToStart">Back to Start</button>
+      <button id="backToStart">Play Again</button>
     </div>
   `
 }

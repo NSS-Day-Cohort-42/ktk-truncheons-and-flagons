@@ -20,11 +20,11 @@ header {
     cursor: pointer;
 }
 
-header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle {
+header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle, .game-over-text, #backToStart {
     font-family: 'Russo One', sans-serif;
 }
 
-input, select, td, .teamNameScores {
+input, select, td, .teamNameScores, .game-over-container > p, .game-over-container > ol {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -61,4 +61,5 @@ body {
     max-width: 600px;
     margin: 1rem auto;
     padding: 1rem;
+    text-align: center;
   }
