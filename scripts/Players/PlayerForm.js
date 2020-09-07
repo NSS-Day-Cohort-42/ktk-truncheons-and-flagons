@@ -1,5 +1,5 @@
 import { getTeams, useTeams } from "../Teams/TeamProvider.js";
-import { savePlayer, getPlayers } from "./PlayerProvider.js";
+import { savePlayer, getPlayers, usePlayers } from "./PlayerProvider.js";
 
 const contentTarget = document.querySelector(".playerFormContainer");
 const eventHub = document.querySelector(".container");
