@@ -1,5 +1,5 @@
 import { getTeams, useTeams } from "../Teams/TeamProvider.js";
-import { savePlayer } from "./PlayerProvider.js";
+import { savePlayer, getPlayers } from "./PlayerProvider.js";
 
 const contentTarget = document.querySelector(".playerFormContainer");
 const eventHub = document.querySelector(".container");
@@ -36,15 +36,30 @@ contentTarget.addEventListener("click", (clickEvent) => {
     const country = document.querySelector(".playerForm__country").value;
     const chosenTeam = document.querySelector(".playerForm__chooseTeam").value;
 
-    if (chosenTeam !== "0") {
-      const player = {
-        firstName: firstName,
-        lastName: lastName,
-        country: country,
-        teamId: parseInt(chosenTeam),
-      };
-      savePlayer(player);
-    } else alert("plzz choose a team");
+    getPlayers()
+      .then(() => {
+        const teamId = parseInt(chosenTeam)
+        const players = usePlayers()
+
+        if (chosenTeam !== "0") {
+          if(players.filter(player => player.teamId === teamId).length >= 3) {
+            alert("That team already has three players, plzz pick another.")
+          }
+
+          else {
+            const player = {
+              firstName: firstName,
+              lastName: lastName,
+              country: country,
+              teamId: teamId
+            };
+            
+            savePlayer(player);
+          }
+        } else alert("plzz choose a team")
+      })
+
+;
   }
 });
 
