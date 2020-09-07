@@ -1,10 +1,11 @@
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".view1")
+const contentTarget = document.querySelector(".gameContainer")
 
 
 const render = () => {
     contentTarget.innerHTML =
-    `<button class="" id="startGameButton">Start Game</button>`
+
+    `<div class="startGameButton"><button id="startGameButton">Start Game</button></div>`
 }
 
 export const StartGame = () => {

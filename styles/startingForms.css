@@ -1,0 +1,33 @@
+.viewForms{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.teamForm, .playerForm {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem
+}
+
+.teamFormTitle, .playerFormTitle {
+    margin-bottom: 0.5rem;
+}
+
+.teamForm__createTeam {
+    width: fit-content;
+}
+
+.teamForm__name, .playerForm__firstName, .playerForm__lastName, .playerForm__country, .playerForm__chooseTeam, .playerForm__createPlayer {
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+.teamForm__createTeam, .playerForm__createPlayer {
+    cursor: pointer;
+}
+
+.teamForm__createTeam:hover, .playerForm__createPlayer:hover {
+    background-color: rgb(91, 11, 18, 0.7);
+    color: whitesmoke;
+}
+
