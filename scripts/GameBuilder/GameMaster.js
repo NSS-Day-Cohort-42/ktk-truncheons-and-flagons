@@ -1,15 +1,16 @@
-import { StartGame } from "../Start/StartGame.js";
-import { teamSelect } from "../Teams/TeamSelect.js";
-import { ScoreList } from "../Scores/ScoreList.js";
-import { scoreForm } from "../Scores/ScoreForm.js";
-import { useTeams } from "../Teams/TeamProvider.js";
-import { saveScores } from "../Scores/ScoreProvider.js";
+import { StartGame } from "../Start/StartGame.js"
+import { teamSelect } from "../Teams/TeamSelect.js"
+import { ScoreList } from "../Scores/ScoreList.js"
+import { scoreForm } from "../Scores/ScoreForm.js"
+import { GameOverScreen } from "./GameOverScreen.js"
+import { useTeams } from "../Teams/TeamProvider.js"
+import { saveScores } from "../Scores/ScoreProvider.js"
 
 const eventHub = document.querySelector(".container");
 
 const ROUND_LIMIT = 3;
 
-const gameStates = ["gameStart", "teamSelect", "scoreForm"];
+const gameStates = [ "gameStart", "teamSelect", "scoreForm", "gameOver" ]
 
 const state = {
   currentState: 0,
@@ -62,6 +63,10 @@ eventHub.addEventListener("AllScoresSubmitted", (event) => {
   }
 });
 
+eventHub.addEventListener("backToStartButtonClicked", () => {
+  progressToNextGameState()
+})
+
 const createScoreObjectsFromCurrentState = () => {
   const gameFinishedTimeStamp = Date.now();
 
@@ -91,9 +96,11 @@ const renderCurrentComponent = () => {
       teamSelect();
       break;
     case "scoreForm":
-      scoreForm(state.teams);
-      ScoreList(state.teams);
-      break;
+      scoreForm(state.teams)
+      ScoreList(state.teams)
+      break
+    case "gameOver":
+      GameOverScreen(state.teams)
   }
 };
 

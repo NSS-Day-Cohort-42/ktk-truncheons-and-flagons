@@ -1,6 +1,7 @@
 @import './startingForms.css';
 @import './selects.css';
 @import './scoreForm.css';
+@import './gameOverScreen.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap');
 
@@ -15,15 +16,16 @@ header {
     width: 10%;
 }
 
-#startGameButton {
+#startGameButton,
+#backToStart {
     cursor: pointer;
 }
 
-header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle {
+header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle, .game-over-text, #backToStart {
     font-family: 'Russo One', sans-serif;
 }
 
-input, select, td, .teamNameScores {
+input, select, td, .teamNameScores, .game-over-container > p, .game-over-container > ol {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -43,7 +45,8 @@ body {
     padding: 20px;
 }
 
-#startGameButton:hover {
+#startGameButton:hover,
+#backToStart:hover {
     background-color: rgb(91, 11, 18, 0.7);
     color: whitesmoke;
 }
