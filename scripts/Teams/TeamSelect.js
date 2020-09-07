@@ -1,6 +1,6 @@
 import { useTeams, getTeams } from "./TeamProvider.js";
 
-const contentTarget = document.querySelector(".view2");
+const contentTarget = document.querySelector(".gameContainer");
 const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("click", (clickEvent) => {
@@ -31,6 +31,7 @@ eventHub.addEventListener("click", (clickEvent) => {
 const render = () => {
   const teamArr = useTeams();
   contentTarget.innerHTML = `
+      <div class="teamSelect">
         <select class="teamSelect1">
             <option value=0>Please select a team...</option>
             ${teamArr.map((team) => {
@@ -50,6 +51,7 @@ const render = () => {
             })}
         </select>
         <button id="goButton">Go To Game</button>
+      </div>
     `;
 };
 

@@ -6,7 +6,8 @@ const eventHub = document.querySelector(".container");
 
 const render = (teams) => {
   contentTarget.innerHTML = `
-    <div class="playerForm">
+  <div class="playerForm">
+    <h2 class="playerFormTitle">New Player</h2>
       <input class="playerForm__firstName" type="text" placeholder="First Name">
       <input class="playerForm__lastName" type="text" placeholder="Last Name">
       <input class="playerForm__country" type="text" placeholder="Country">
