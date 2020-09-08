@@ -55,6 +55,9 @@ contentTarget.addEventListener("click", (clickEvent) => {
             };
             
             savePlayer(player);
+
+            const teams = useTeams();
+            render(teams);
           }
         } else alert("plzz choose a team")
       })
