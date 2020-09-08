@@ -12,3 +12,11 @@
 .game-final-ranking {
   list-style-type: none;
 }
+
+.game-final-ranking > li:hover {
+  background-color: rgb(91, 11, 18, 0.7);
+}
+
+.game-final-ranking > li:first-child:hover {
+  background-color: rgba(245, 224, 39, 0.849);
+}

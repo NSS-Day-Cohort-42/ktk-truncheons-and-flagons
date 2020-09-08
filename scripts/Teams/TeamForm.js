@@ -5,12 +5,18 @@ const contentTarget=document.querySelector(".teamFormContainer")
 
 eventHub.addEventListener("click",clickEvent=>{
     if (clickEvent.target.id==="createTeam"){
-        const teamName=document.querySelector(".teamForm__name")
-        const newTeam={
-            "name":teamName.value,
-            "dateCreated":Date.now()
+        const teamName=document.querySelector(".teamForm__name").value
+        if(teamName === "") {
+            alert("Your team has to have a name, come on bro")
         }
-        saveTeam(newTeam)
+        else {
+            const newTeam={
+                "name":teamName,
+                "dateCreated":Date.now()
+            }
+            saveTeam(newTeam)
+            render()
+        }
     }
 })
 

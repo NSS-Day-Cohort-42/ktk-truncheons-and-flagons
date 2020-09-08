@@ -24,8 +24,9 @@ export const LeaderBoard = () => {
 
 const render = () => {
     const leaderboardHTML = `
-          <div class="tableDiv">
-            <table class="tableElement">
+          <div class="tableDiv2">
+            <h2 class="leaderboardHeader">Leaderboard</h2>
+            <table class="tableElement leaderboardTable">
                 <tr class="tableHeader">
                     <th>Team</th><th>Number of Players</th><th>All-time Score</th>
                 </tr>    
