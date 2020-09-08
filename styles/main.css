@@ -2,6 +2,7 @@
 @import './selects.css';
 @import './scoreForm.css';
 @import './gameOverScreen.css';
+@import './leaderboard.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap');
 
@@ -21,7 +22,7 @@ header {
     cursor: pointer;
 }
 
-header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle, .game-over-text, #backToStart {
+header, #startGameButton, #goButton, .teamForm__createTeam, .playerForm__createPlayer, #submitScore, .teamFormTitle, .playerFormTitle, th, .scoreFormTitle, .game-over-text, #backToStart, .leaderboardHeader {
     font-family: 'Russo One', sans-serif;
 }
 
