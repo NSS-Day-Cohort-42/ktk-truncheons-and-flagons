@@ -66,6 +66,3 @@ export const teamSelect = () => {
   getTeams().then(getPlayers).then(render);
 };
 
-eventHub.addEventListener("teamStateChanged", () => {
-  render()
-})

@@ -23,6 +23,13 @@ eventHub.addEventListener("startGameButtonClicked", () => {
   progressToNextGameState();
 });
 
+eventHub.addEventListener("teamStateChanged", () => {
+  if(gameStates[state.currentState] === 'teamSelect') {
+    renderCurrentComponent()
+  }
+})
+
+
 // User selected the three teams from TeamSelect - grab the full team objects from teams array, initialize their scores to 0 for the game, assign them to GameMaster application state teams, move on to next game state
 eventHub.addEventListener("AllTeamsSelected", (event) => {
   const teamIds = event.detail.teamIds;

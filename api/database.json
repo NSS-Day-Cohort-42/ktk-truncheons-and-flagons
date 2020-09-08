@@ -1,238 +1,104 @@
 {
   "teams": [
     {
-      "id": 1,
       "name": "The Growlbacks",
-      "dateCreated": "07-06-2020"
+      "dateCreated": 1599523355616,
+      "id": 1
     },
     {
-      "name": "HERE IS MY TEST TEAM",
-      "dateCreated": 1597346553537,
+      "name": "Alien Abductees",
+      "dateCreated": 1599523372525,
       "id": 2
     },
     {
-      "name": "TEST",
-      "dateCreated": 1597346721767,
+      "name": "Elegant Eagles",
+      "dateCreated": 1599523480248,
       "id": 3
-    },
-    {
-      "name": "NOPE",
-      "dateCreated": 1598051409611,
-      "id": 5
-    },
-    {
-      "name": "the brownnosers",
-      "dateCreated": 1599521101997,
-      "id": 6
-    },
-    {
-      "name": "another",
-      "dateCreated": 1599521378962,
-      "id": 7
-    },
-    {
-      "name": "BUTTWHYY",
-      "dateCreated": 1599521453205,
-      "id": 8
     }
   ],
   "players": [
     {
-      "id": 1,
-      "firstName": "Brown",
-      "lastName": "Stevelee",
+      "firstName": "Growlback",
+      "lastName": "1",
       "country": "USA",
-      "teamId": 1
+      "teamId": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "firstName": "Jason",
-      "lastName": "Server",
-      "country": "Lithuania",
-      "teamId": 1
+      "firstName": "Growlback",
+      "lastName": "2",
+      "country": "USA",
+      "teamId": 1,
+      "id": 2
     },
     {
-      "id": 3,
-      "firstName": "Miz",
-      "lastName": "Trunchbull",
-      "country": "England",
-      "teamId": 1
+      "firstName": "Growlback",
+      "lastName": "3",
+      "country": "USA",
+      "teamId": 1,
+      "id": 3
     },
     {
-      "firstName": "dis boi",
-      "lastName": "that place",
-      "country": "it doesnt matter",
-      "teamId": 6,
+      "firstName": "Alien Abductee",
+      "lastName": "1",
+      "country": "USA",
+      "teamId": 2,
       "id": 4
     },
     {
-      "firstName": "dat guy",
-      "lastName": "another place",
-      "country": "still doesnt matter",
-      "teamId": 6,
+      "firstName": "Alien Abductee",
+      "lastName": "2",
+      "country": "USA",
+      "teamId": 2,
       "id": 5
     },
     {
-      "firstName": "some gal",
-      "lastName": "another OTHER palce",
-      "country": "matters?",
-      "teamId": 6,
+      "firstName": "Alien Abductee",
+      "lastName": "3",
+      "country": "USA",
+      "teamId": 2,
       "id": 6
     },
     {
-      "firstName": "YAHS",
-      "lastName": "YAHS",
-      "country": "YAHS",
-      "teamId": 7,
+      "firstName": "Elegant Eagles ",
+      "lastName": "1",
+      "country": "USA",
+      "teamId": 3,
       "id": 7
     },
     {
-      "firstName": "YAHS",
-      "lastName": "YAHS",
-      "country": "YAHS",
-      "teamId": 7,
+      "firstName": "Elegant Eagles ",
+      "lastName": "2",
+      "country": "USA",
+      "teamId": 3,
       "id": 8
     },
     {
-      "firstName": "YAHS",
-      "lastName": "YAHS",
-      "country": "YAHS",
-      "teamId": 7,
-      "id": 9
-    },
-    {
-      "firstName": "YAHS",
-      "lastName": "YAHS",
-      "country": "YAHS",
-      "teamId": 7,
-      "id": 10
-    },
-    {
-      "firstName": "YAHS",
-      "lastName": "YAHS",
-      "country": "YAHS",
-      "teamId": 7,
-      "id": 11
-    },
-    {
-      "firstName": "YAHS",
-      "lastName": "YAHS",
-      "country": "YAHS",
-      "teamId": 7,
-      "id": 12
-    },
-    {
-      "firstName": "here is my test team",
-      "lastName": "1",
-      "country": "usa",
-      "teamId": 2,
-      "id": 13
-    },
-    {
-      "firstName": "here is my test team",
-      "lastName": "2",
-      "country": "usa",
-      "teamId": 2,
-      "id": 14
-    },
-    {
-      "firstName": "here is my test team",
+      "firstName": "Elegant Eagles ",
       "lastName": "3",
-      "country": "usa",
-      "teamId": 2,
-      "id": 15
+      "country": "USA",
+      "teamId": 3,
+      "id": 9
     }
   ],
   "scores": [
     {
       "teamId": 1,
-      "points": 27,
-      "date": 1599420869603,
-      "id": 1
-    },
-    {
-      "teamId": 3,
-      "points": 25,
-      "date": 1599420869603,
-      "id": 2
-    },
-    {
-      "teamId": 5,
-      "points": 14,
-      "date": 1599420869603,
-      "id": 3
-    },
-    {
-      "teamId": 1,
-      "points": 9,
-      "date": 1599517864654,
-      "id": 4
-    },
-    {
-      "teamId": 2,
-      "points": 14,
-      "date": 1599517864654,
-      "id": 5
-    },
-    {
-      "teamId": 3,
-      "points": 15,
-      "date": 1599517864654,
-      "id": 6
-    },
-    {
-      "teamId": 5,
-      "points": 13,
-      "date": 1599518214249,
-      "id": 7
-    },
-    {
-      "teamId": 2,
-      "points": 93,
-      "date": 1599518214249,
-      "id": 8
-    },
-    {
-      "teamId": 3,
-      "points": 15,
-      "date": 1599518214249,
-      "id": 9
-    },
-    {
-      "teamId": 7,
-      "points": 11,
-      "date": 1599521489159,
-      "id": 10
-    },
-    {
-      "teamId": 5,
-      "points": 16,
-      "date": 1599521489159,
-      "id": 11
-    },
-    {
-      "teamId": 6,
-      "points": 93614230,
-      "date": 1599521489159,
-      "id": 12
-    },
-    {
-      "teamId": 1,
       "points": 3,
-      "date": 1599522633703,
-      "id": 13
+      "date": 1599523586937,
+      "id": 1
     },
     {
       "teamId": 2,
       "points": 6,
-      "date": 1599522633703,
-      "id": 14
+      "date": 1599523586937,
+      "id": 2
     },
     {
-      "teamId": 6,
+      "teamId": 3,
       "points": 9,
-      "date": 1599522633703,
-      "id": 15
+      "date": 1599523586937,
+      "id": 3
     }
   ]
 }
